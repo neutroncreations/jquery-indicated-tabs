@@ -10,8 +10,8 @@
 (function($){
   
   
-  $.fn.notchedTabs = function(panesSelector, options, tabsOptions) {
-    var options         = $.extend({}, $.fn.notchedTabs.defaultOptions, options),
+  $.fn.indicatedTabs = function(panesSelector, options, tabsOptions) {
+    var options         = $.extend({}, $.fn.indicatedTabs.defaultOptions, options),
         
         indicator       = $(options.indicator),
         indicatorWidth  = indicator.width()/2,
@@ -19,7 +19,7 @@
         
         children        = this.children(options.childrenSelector),
         
-        tabsOptions     = $.extend({}, $.fn.notchedTabs.tabsOptions, tabsOptions),
+        tabsOptions     = $.extend({}, $.fn.indicatedTabs.tabsOptions, tabsOptions),
         
         tempFn,
         beforeClick     = function(event, index) {
@@ -46,7 +46,7 @@
     
   };
   
-  $.fn.notchedTabs.defaultOptions = {
+  $.fn.indicatedTabs.defaultOptions = {
     indicator: '#indicator',
     childrenSelector: 'li',
     duration: 600,
@@ -54,7 +54,7 @@
     vertical: false
   };
   
-  $.fn.notchedTabs.tabOptions = {
+  $.fn.indicatedTabs.tabOptions = {
     effect: 'fade',
     fadeOutSpeed: 0,
     fadeInSpeed: 400
